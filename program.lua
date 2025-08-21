@@ -119,7 +119,7 @@ parallel.waitForAll(
   function() basalt.run() end,
   updateTotal,
   updateRate,
-  updatePercentag
+  updatePercentage
 )
     
     
