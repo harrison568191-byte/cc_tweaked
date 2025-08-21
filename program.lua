@@ -53,9 +53,11 @@ monitorFrame:addTextBox()
     :setForeground(colors.blue)
 
 -- Draw outer blue background rectangle
-monitorFrame:getCanvas():rect(2, 2, w - 26, h - 2, " ", colors.blue, colors.blue)
+monitorFrame:getCanvas()
+    :rect(2, 2, w - 26, h - 2, " ", colors.blue, colors.blue)
 -- Draw inner black content rectangle
-monitorFrame:getCanvas():rect(3, 3, w - 28, h - 4, " ", colors.black, colors.black)
+monitorFrame:getCanvas()
+    :rect(3, 3, w - 28, h - 4, " ", colors.black, colors.black)
 
 --Add Title Text Box--
 monitorFrame:addTextBox()
@@ -66,9 +68,11 @@ monitorFrame:addTextBox()
     :setForeground(colors.yellow)
 
 -- Draw outer yellow background box
-monitorFrame:getCanvas():rect(38, 2, w - 40, h - 16, " ", colors.yellow, colors.yellow)
+monitorFrame:getCanvas()
+    :rect(38, 2, w - 40, h - 16, " ", colors.yellow, colors.yellow)
 -- Draw inner black box (content area)
-monitorFrame:getCanvas():rect(39, 3, w - 40, h - 18, " ", colors.black, colors.black)
+monitorFrame:getCanvas()
+    :rect(39, 3, w - 40, h - 18, " ", colors.black, colors.black)
 
 local itemLabel = monitorFrame:addLabel()
     :setText("LV Panels: 0 ")
