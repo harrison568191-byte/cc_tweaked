@@ -110,7 +110,7 @@ local function updateStoragePercentage()
 
     monitorFrame:GetCanvas()
     :rect(40, 8, barWidth, 1 , " ",colors.gray,colors.gray)
-     monitorFrame:GetCanvas()
+    monitorFrame:GetCanvas()
     :rect(40, 8, scaledWidth, 1 , " ",colors.green,colors.green)
   end
 end
