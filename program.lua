@@ -1,4 +1,3 @@
---Find Basalt File for UI--
 local basalt = require("basalt")
 --Find monitor -- -- Check Monitor Name--
 local monitor = peripheral.wrap("monitor_0")
