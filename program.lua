@@ -76,10 +76,10 @@ local itemLabel = monitorFrame:addLabel()
     :setForeground(colors.white)
 
 --==Item Total Function==--
-local function UpdateTotal()
+local function updateTotal()
     while true do
-        local LVCount = getTotalItems()
-        itemLabel:setText("LV Panels: " .. LVCount)
+        local count = getTotalItems()
+        itemLabel:setText("LV Panels: " .. count)
         sleep(1)
     end
 end
@@ -90,9 +90,33 @@ local rateLabel = monitorFrame:addLabel()
     :setForeground(colors.white)
 
 --==Total per Min Function==--
-local function UpdateRate()
+local function updateRate()
     while true do
         local rate = getItemsPerMinute()
         rateLabel:setText("Per Minute: " .. rate)
     end
 end
+
+--==Storage Percentage Function==--
+local function updateStoragePercentage()
+  while true do 
+    local percentage = getStoragePercentage()
+    local barWidth = w - 42
+    local scaledWidth = math.floor((percentage / 100) * barWidth)
+
+    monitor:Frame:GetCanvas()
+    :rect(40, 8, barWidth, 1 , " ",colors.gray,colors.gray)
+     monitor:Frame:GetCanvas()
+    :rect(40, 8, scaledWidth, 1 , " ",colors.green,colors.green)
+  end
+end
+
+--==UpdateLoop==--
+parallel.waitForAll(
+  function() basalt.run() end,
+  updateTotal,
+  updateRate,
+  updatePercentag
+)
+    
+    
