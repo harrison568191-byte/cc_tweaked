@@ -108,9 +108,9 @@ local function updateStoragePercentage()
     local barWidth = w - 42
     local scaledWidth = math.floor((percentage / 100) * barWidth)
 
-    monitor:Frame:GetCanvas()
+    monitorFrame:GetCanvas()
     :rect(40, 8, barWidth, 1 , " ",colors.gray,colors.gray)
-     monitor:Frame:GetCanvas()
+     monitorFrame:GetCanvas()
     :rect(40, 8, scaledWidth, 1 , " ",colors.green,colors.green)
   end
 end
