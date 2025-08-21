@@ -3,7 +3,7 @@ local basalt = require("basalt")
 --Find monitor -- -- Check Monitor Name--
 local monitor = peripheral.wrap("monitor_0")
 --monitor Size--
-local w, h = monitor.getS
+local w, h = monitor.getSize()
 --Find Chest--
 local chest = peripheral.wrap("minecraft:ironchest_diamond_1")
 
