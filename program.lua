@@ -10,7 +10,7 @@ local chest = peripheral.wrap("minecraft:ironchest_diamond_1")
 --GetTotaltems--
 local function getTotalItems()
   local totalCount = 0
-  for _. item in pairs(chest.list()) do
+  for _, item in pairs(chest.list()) do
     totalCount = totalCount + item.count
   end
   return totalCount
