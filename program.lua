@@ -39,7 +39,7 @@ end
 
 --Monitor UI--
 --Monitor Backgound--
-local monitor:Frame = basalt.createFrame()
+local monitorFrame = basalt.createFrame()
   :setTerm(monitor)
   :setBackground(colors.black) --color of background
 
